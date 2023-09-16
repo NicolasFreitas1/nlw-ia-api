@@ -24,3 +24,16 @@ Content-Type: application/json
 {
     "prompt": "testando o microfone, palavras soltas"
 }
+
+###
+
+# @name generate-ai-completion
+
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "c83cc8ff-17c5-4922-990d-a5fd2fd712ae",
+    "temperature": 0.5,
+    "template": "Gere um resumo sucinto da transcrição do vídeo informado a seguir: '''{transcription}'''"
+}
