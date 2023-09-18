@@ -21,5 +21,18 @@ POST http://localhost:3333/videos/5deae12f-ab4c-44cc-9186-99330c7512d1/transcrip
 Content-Type: application/json
 
 {
-  "prompt": "clean architecture, ddd"
+    "prompt": "testando o microfone, palavras soltas"
+}
+
+###
+
+# @name generate-ai-completion
+
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "c83cc8ff-17c5-4922-990d-a5fd2fd712ae",
+    "temperature": 0.5,
+    "prompt": "Gere um resumo sucinto da transcrição do vídeo informado a seguir: '''{transcription}'''"
 }
